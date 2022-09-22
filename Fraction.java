@@ -3,12 +3,11 @@ import java.util.*;
 
 public class Fraction
 {
-    public class Global
-    {
+   
         public static String input = ""; //Sorry Mr. Matuni, I was too invested in this strat by this point that I had to do this...
-    }
+    
 
-    Global quickStore = new Global();
+   
     public static void main(String[] args)
     {
         
@@ -20,7 +19,7 @@ public class Fraction
         int [] returns = checkString(in);
         int operation = returns[0];
         int operatorIndex=returns[1];
-        String input = Global.input;
+       
         int numDivCount = 0;
         int denomDivCount=0;
         boolean denomGood = false;
@@ -47,7 +46,7 @@ public class Fraction
                         returns = checkString(in);
                         operation = returns[0];
                         operatorIndex=returns[1];
-                        input = Global.input;
+                        input =    input;
                         numDivCount=0;
                         numGood=false;
                     }
@@ -60,7 +59,7 @@ public class Fraction
                     returns = checkString(in);
                     operation = returns[0];
                     operatorIndex=returns[1];
-                    input = Global.input;
+                    input =    input;
                     numDivCount=0;
                     numGood=false;
                 }
@@ -84,7 +83,7 @@ public class Fraction
                         returns = checkString(in);
                         operation = returns[0];
                         operatorIndex=returns[1];
-                        input = Global.input;
+                        input =    input;
                         denomDivCount=0;
                         denomGood=false;
                     }
@@ -97,7 +96,7 @@ public class Fraction
                     returns = checkString(in);
                     operation = returns[0];
                     operatorIndex=returns[1];
-                    input = Global.input;
+                    input =    input;
                     denomDivCount=0;
                     denomGood=false;
                 }
@@ -204,8 +203,13 @@ public class Fraction
         System.out.print("Enter a fraction, operator, and another fraction usingthis format: (2/3 + 1/2), and I will add, subtract, multiply, or divide the fractions according to the operation desired. ");
         System.out.print("\nEnter Fractions--> ");
         
-        String input = in.nextLine();
-        Global.input=input;
+        String checkVal="";
+
+        //do{
+         //   input = in.nextLine();
+         //   }while(!input.matches("\d+/\d+\s+[\*/\-\+]\s+\d+/\d+")))
+        
+         //  input=checkVal;
         //glb=input;
         char[] chars = input.toCharArray();
         
