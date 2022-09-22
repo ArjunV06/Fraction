@@ -3,16 +3,25 @@ import java.util.*;
 
 public class Fraction
 {
+    public class Global
+    {
+        public static String input = ""; //Sorry Mr. Matuni, I was too invested in this strat by this point that I had to do this...
+    }
+
+    Global quickStore = new Global();
     public static void main(String[] args)
     {
         
         Scanner in = new Scanner(System.in);
+        int[] numerator = new int[20];
+        int[] denominator = new int[20];
         
-        
-        //String glb = "";
+       
         int [] returns = checkString(in);
         int operation = returns[0];
         int operatorIndex=returns[1];
+        String input = Global.input;
+        System.out.println(input);
         //String numerator = 
 
         //System.out.println(operation + "" + operatorIndex);
@@ -21,10 +30,10 @@ public class Fraction
     public static int[] checkString(Scanner in)
     {
         System.out.print("Please input an expression in the order: num/denom (+/*-) num/denom --> ");
-        int[] numerator = new int[20];
-        int[] denominator = new int[20];
+        
         String input = in.nextLine();
-        glb=input;
+        Global.input=input;
+        //glb=input;
         char[] chars = input.toCharArray();
         
         int firstSlash = input.indexOf("/");
@@ -62,15 +71,7 @@ public class Fraction
                     {
                         returns = checkString(in);
                         return returns;
-                        //System.out.println(returns[0] + "" + returns[1]);
-                        //System.out.print("ERROR: Please input an expression in the order: num/denom (+/*-) num/denom! --> ");
-                        //input = in.nextLine();
-                        //chars = input.toCharArray();
-
-                        //operation = 0;
-                        //operatorIndex=999;
-                        //firstSlash=input.indexOf("/");
-                        //break;
+                        
                     }
                 break;
                         
