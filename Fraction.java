@@ -7,21 +7,24 @@ public class Fraction
     {
         
         Scanner in = new Scanner(System.in);
-        int[] numerator = new int[5];
-        int[] denominator = new int[5];
         
         
+        //String glb = "";
         int [] returns = checkString(in);
         int operation = returns[0];
         int operatorIndex=returns[1];
-        System.out.println(operation + "" + operatorIndex);
+        //String numerator = 
+
+        //System.out.println(operation + "" + operatorIndex);
     }
     
     public static int[] checkString(Scanner in)
     {
         System.out.print("Please input an expression in the order: num/denom (+/*-) num/denom --> ");
-        
+        int[] numerator = new int[20];
+        int[] denominator = new int[20];
         String input = in.nextLine();
+        glb=input;
         char[] chars = input.toCharArray();
         
         int firstSlash = input.indexOf("/");
